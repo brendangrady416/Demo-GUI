@@ -1,0 +1,28 @@
+{
+  "name": "demogui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakeHolcombe16/demoGUI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JakeHolcombe16/demoGUI/issues"
+  },
+  "homepage": "https://github.com/JakeHolcombe16/demoGUI#readme",
+  "dependencies": {
+    "chart.js": "^4.4.8",
+    "firebase": "^11.6.0",
+    "vite": "^6.2.1"
+  }
+}

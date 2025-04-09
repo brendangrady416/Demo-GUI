@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo GUI - Users</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/users.css">
+    <script defer src="src/script.js"></script>
+    <script defer src="src/users.js"></script>
+    <script src="https://kit.fontawesome.com/8e9f773407.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="public/images/OSS-Logo-latest1.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">ACME CO VAULT</h2>
+            </div>
+            
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section">
+                <ul>
+                    <li class="sidebar-subtitle"><a href="index.html">Overview</a></li>
+                    <li class="sidebar-subtitle"><a href="files.html">Files</a></li>
+                    <li class="sidebar-subtitle"><a href="libraries.html">Libraries</a></li>
+                    <li class="sidebar-subtitle"><a href="systems.html">Systems</a></li>
+                    <li class="sidebar-subtitle"><a href="reports.html">Reports</a></li>
+                    <li class="sidebar-subtitle"><a href="users.html">Users</a></li>
+                    <li class="sidebar-subtitle"><a href="groups.html">Groups</a></li>
+                    <li class="sidebar-subtitle"><a href="accessKeys.html">Access Keys</a></li>
+                    <li class="sidebar-subtitle"><a href="policies.html">Policies</a></li>
+                    <li class="sidebar-subtitle"><a href="vaultAI.html">Vault AI</a></li>
+                    <li class="sidebar-subtitle"><a href="equipmentOrder.html">Equipment Order</a></li>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Support</a></li> 
+                </ul>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section">
+                <ul>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Transcoding</a></li>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Partial File Recall</a></li>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Third Party Integrations</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section, sidebar-bottom">
+                <p><span>AcmeCoVault</span><br>Host Name</p>
+                <p><span>5,000 TB</span><br>Total Storage Capacity</p>
+                <p><span>2,000 TB</span><br>Local Storage Capacity</p>
+                <p><span>Unlimited</span><br>Vault Manager Licenses</p>
+                <p><span>Add-Ons</span><br>Vault AI</p>
+                <!-- Logout Button -->
+                <button class="details" id="logout-button">Logout</button>
+            </div>
+
+            <div class="sidebar-logo">
+                <a href="https://www.osstorage.com/" target="_blank">
+                    <img src="public/images/OSS_head_logo.webp" alt="Company Logo">
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                
+                <div class="logo-container">
+                    <img src="public/images/OSS-Logo-latest1.png" alt="Company Logo" class="logo">
+                    <h1>Users</h1>
+                </div>
+            </header> 
+
+            <div class="users-actions">
+                <button class="user-btn" id="add-user-btn">Add User</button>
+            </div>
+
+            <div class="users-table-container">
+                <table class="users-table">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Group</th>
+                            <th>Home Directory</th>
+                            <th>Permissions</th>
+                            <th>Added By</th>
+                            <th>Date Added</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-list">
+                        <tr>
+                            <td>willowh</td>
+                            <td>harbor</td>
+                            <td>["/cache/home/willowh"]</td>
+                            <td>Moderator</td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>evanh</td>
+                            <td>harbor</td>
+                            <td>["/cache/home/harbor/Backup/Evan"]</td>
+                            <td>InfiniDisc-Restricted User</td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>charliez</td>
+                            <td>summit</td>
+                            <td>["/cache/home/summit"]</td>
+                            <td>InfiniDisc-Administrator</td>
+                            <td>techops</td>
+                            <td>2025-01-05</td>
+                            <td>
+                                <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>lucask</td>
+                            <td>testing</td>
+                            <td>["/cache/home/testing", "/cache/home/summit"]</td>
+                            <td>Administrator</td>
+                            <td>techops</td>
+                            <td>2025-01-12</td>
+                            <td>
+                                <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>naomib</td>
+                            <td>testing</td>
+                            <td>["/cache/home/vortex/Naomi"]</td>
+                            <td>InfiniDisc-User</td>
+                            <td>techops</td>
+                            <td>2025-03-03</td>
+                            <td>
+                                <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>acmelead</td>
+                            <td>acme</td>
+                            <td>["/cache/home/acme/LeadDocs", "/cache/home/acme/Reports"]</td>
+                            <td>Admin</td>
+                            <td>willowh</td>
+                            <td>2025-01-07</td>
+                            <td>
+                                <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="logout-btn" id="logout-button">Log Out</button>
+        </div> 
+    </div>
+
+    <!-- Add User Popup -->
+    <div class="popup" id="add-user-popup">
+        <div class="popup-content">
+            <span class="close-btn" id="close-popup">&times;</span>
+            <h2>Add User</h2>
+            <form id="add-user-form">
+                <label>Username:</label>
+                <input type="text" id="username" required>
+                
+                <label>Group:</label>
+                <input type="text" id="group" required>
+                
+                <label>Home Directory:</label>
+                <input type="text" id="home-directory" required>
+                
+                <label>Permissions:</label>
+                <input type="text" id="permissions" required>
+                
+                <label>Added By:</label>
+                <input type="text" id="added-by" required>
+                
+                <button type="submit">Add User</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

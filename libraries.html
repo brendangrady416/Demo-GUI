@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo GUI - Libraries</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/libraries.css">
+    <script defer src="src/script.js"></script>
+    <!-- Font awesome for icons -->
+    <script src="https://kit.fontawesome.com/8e9f773407.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="public/images/OSS-Logo-latest1.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">ACME CO VAULT</h2>
+            </div>
+            
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section">
+                <ul>
+                    <li class="sidebar-subtitle"><a href="index.html">Overview</a></li>
+                    <li class="sidebar-subtitle"><a href="files.html">Files</a></li>
+                    <li class="sidebar-subtitle"><a href="libraries.html">Libraries</a></li>
+                    <li class="sidebar-subtitle"><a href="systems.html">Systems</a></li>
+                    <li class="sidebar-subtitle"><a href="reports.html">Reports</a></li>
+                    <li class="sidebar-subtitle"><a href="users.html">Users</a></li>
+                    <li class="sidebar-subtitle"><a href="groups.html">Groups</a></li>
+                    <li class="sidebar-subtitle"><a href="accessKeys.html">Access Keys</a></li>
+                    <li class="sidebar-subtitle"><a href="policies.html">Policies</a></li>
+                    <li class="sidebar-subtitle"><a href="vaultAI.html">Vault AI</a></li>
+                    <li class="sidebar-subtitle"><a href="equipmentOrder.html">Equipment Order</a></li>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Support</a></li> 
+                </ul>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section">
+                <ul>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Transcoding</a></li>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Partial File Recall</a></li>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Third Party Integrations</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section, sidebar-bottom">
+                <p><span>AcmeCoVault</span><br>Host Name</p>
+                <p><span>5,000 TB</span><br>Total Storage Capacity</p>
+                <p><span>2,000 TB</span><br>Local Storage Capacity</p>
+                <p><span>Unlimited</span><br>Vault Manager Licenses</p>
+                <p><span>Add-Ons</span><br>Vault AI</p>
+                <!-- Logout Button -->
+                <button class="details" id="logout-button">Logout</button>
+            </div>
+
+            <div class="sidebar-logo">
+                <a href="https://www.osstorage.com/" target="_blank">
+                    <img src="public/images/OSS_head_logo.webp" alt="Company Logo">
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                
+                <div class="logo-container">
+                    <img src="public/images/OSS-Logo-latest1.png" alt="Company Logo" class="logo">
+                    <h1>Libraries</h1>
+                </div>
+            </header> 
+
+            <div class="content">
+                <!-- Status Section -->
+                <div class="status-section">
+                    <div class="status-box">
+                        <span class="status-indicator online">● Online</span>
+                        <span class="library-name">QUANTUM Scalar i3-i6</span>
+                    </div>
+                    <div class="drive-list">
+                        <span>/dev/IBMtape3: CX1005L8</span>
+                        <span>/dev/IBMtape1: CX015L7</span>
+                        <span>/dev/IBMtape2: CX0102L7</span>
+                        <span>/dev/IBMtape0: MB1007L8</span>
+                    </div>
+                </div>
+
+                <!-- Actions Section -->
+                <div class="actions">
+                    <button class="action-btn">Stop Migrations</button>
+                    <button class="action-btn">Pause Staging</button>
+                    <button class="action-btn">API Reject Stage</button>
+                    <button class="action-btn">Clear Drives</button>
+                    <button class="action-btn">Clear Stages</button>
+                    <button class="action-btn">Format Tapes</button>
+                    <button class="action-btn">Inventory</button>
+                    <button class="action-btn">Drive Config</button>
+                </div>
+
+                <!-- Table -->
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Label</th>
+                                <th>Free Space</th>
+                                <th>Used Space</th>
+                                <th>Volume Group</th>
+                                <th>Format</th>
+                                <th>Slot</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CX0109L7</td>
+                                <td>0</td>
+                                <td>5.21 TB</td>
+                                <td>COX-STUCK</td>
+                                <td>ltfs</td>
+                                <td>absent</td>
+                            </tr>
+                            <tr>
+                                <td>CX0103L7</td>
+                                <td>57.00 MB</td>
+                                <td>5.21 TB</td>
+                                <td>COX</td>
+                                <td>ltfs</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>CX0119L7</td>
+                                <td>86.00 MB</td>
+                                <td>5.21 TB</td>
+                                <td>coxcopy2</td>
+                                <td>ltfs</td>
+                                <td>absent</td>
+                            </tr>
+                            <tr>
+                                <td>MB0003L7</td>
+                                <td>76.00 MB</td>
+                                <td>5.21 TB</td>
+                                <td>dubai</td>
+                                <td>ltfs</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>TST003M8</td>
+                                <td>7.94 TB</td>
+                                <td>4.00 MB</td>
+                                <td>-</td>
+                                <td>ltfs</td>
+                                <td>absent</td>
+                            </tr>
+                            <tr>
+                                <td>MB0001L7</td>
+                                <td>7.94 TB</td>
+                                <td>4.00 MB</td>
+                                <td>dubai</td>
+                                <td>ltfs</td>
+                                <td>absent</td>
+                            </tr>
+                            <tr>
+                                <td>MB0002L7</td>
+                                <td>7.94 TB</td>
+                                <td>4.00 MB</td>
+                                <td>dubai</td>
+                                <td>ltfs</td>
+                                <td>absent</td>
+                            </tr>
+                            <tr>
+                                <td>MB0004L7</td>
+                                <td>7.94 TB</td>
+                                <td>4.00 MB</td>
+                                <td>dubai</td>
+                                <td>ltfs</td>
+                                <td>absent</td>
+                            </tr>  
+                            <tr>
+                                <td>CX01196H</td>
+                                <td>7.94 TB</td>
+                                <td>4.00 MB</td>
+                                <td>coxcopy2</td>
+                                <td>ltfs</td>
+                                <td>absent</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>

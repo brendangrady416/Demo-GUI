@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo GUI - Access Keys</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/accessKeys.css">
+    <link rel="stylesheet" href="css/users.css">
+    <script defer src="src/script.js"></script>
+    <script defer src="src/accessKeys.js"></script>
+    <script src="https://kit.fontawesome.com/8e9f773407.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="public/images/OSS-Logo-latest1.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">ACME CO VAULT</h2>
+            </div>
+            
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section">
+                <ul>
+                    <li class="sidebar-subtitle"><a href="index.html">Overview</a></li>
+                    <li class="sidebar-subtitle"><a href="files.html">Files</a></li>
+                    <li class="sidebar-subtitle"><a href="libraries.html">Libraries</a></li>
+                    <li class="sidebar-subtitle"><a href="systems.html">Systems</a></li>
+                    <li class="sidebar-subtitle"><a href="reports.html">Reports</a></li>
+                    <li class="sidebar-subtitle"><a href="users.html">Users</a></li>
+                    <li class="sidebar-subtitle"><a href="groups.html">Groups</a></li>
+                    <li class="sidebar-subtitle"><a href="accessKeys.html">Access Keys</a></li>
+                    <li class="sidebar-subtitle"><a href="policies.html">Policies</a></li>
+                    <li class="sidebar-subtitle"><a href="vaultAI.html">Vault AI</a></li>
+                    <li class="sidebar-subtitle"><a href="equipmentOrder.html">Equipment Order</a></li>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Support</a></li> 
+                </ul>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section">
+                <ul>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Transcoding</a></li>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Partial File Recall</a></li>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Third Party Integrations</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section, sidebar-bottom">
+                <p><span>AcmeCoVault</span><br>Host Name</p>
+                <p><span>5,000 TB</span><br>Total Storage Capacity</p>
+                <p><span>2,000 TB</span><br>Local Storage Capacity</p>
+                <p><span>Unlimited</span><br>Vault Manager Licenses</p>
+                <p><span>Add-Ons</span><br>Vault AI</p>
+                <!-- Logout Button -->
+                <button class="details" id="logout-button">Logout</button>
+            </div>
+
+            <div class="sidebar-logo">
+                <a href="https://www.osstorage.com/" target="_blank">
+                    <img src="public/images/OSS_head_logo.webp" alt="Company Logo">
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                
+                <div class="logo-container">
+                    <img src="public/images/OSS-Logo-latest1.png" alt="Company Logo" class="logo">
+                    <h1>Access Keys</h1>
+                </div>
+            </header> 
+
+            <div class="access-keys-actions">
+                <button class="access-btn" id="add-key-btn">Generate Access Key</button>
+            </div>
+
+            <div class="access-keys-table-container">
+                <table class="access-keys-table">
+                    <thead>
+                        <tr>
+                            <th>Key</th>
+                            <th>Owner</th>
+                            <th>Permissions</th>
+                            <th>Created</th>
+                            <th>Expires</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="keys-list">
+                        <tr>
+                            <td>AKFJ-2342-KDFL-4939</td>
+                            <td>Admin</td>
+                            <td>Full Access</td>
+                            <td>2025-02-17</td>
+                            <td>2026-02-17</td>
+                            <td>
+                                <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>AKLJ-9834-KFJG-7583</td>
+                            <td>JohnDoe</td>
+                            <td>Read-Only</td>
+                            <td>2025-03-1</td>
+                            <td>2026-01-01</td>
+                            <td>
+                                <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+    </div>
+
+    <!-- Add Access Key Popup -->
+    <div class="popup" id="add-key-popup">
+        <div class="popup-content">
+            <span class="close-btn" id="close-popup">&times;</span>
+            <h2>Generate New Access Key</h2>
+            <form id="add-key-form">
+                <label>Owner:</label>
+                <input type="text" id="owner" required>
+                
+                <label>Permissions:</label>
+                <select id="permissions" required>
+                    <option value="Full Access">Full Access</option>
+                    <option value="Read-Only">Read-Only</option>
+                    <option value="Limited Access">Limited Access</option>
+                </select>
+                
+                <label>Expiration Date:</label>
+                <input type="date" id="expiration" required>
+                
+                <button type="submit">Generate Key</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo GUI</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/aside.css">
+    <script defer src="src/script.js" type="module"></script>
+    <!-- Font awesome for icons -->
+    <script src="https://kit.fontawesome.com/8e9f773407.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="public/images/OSS-Logo-latest1.png" type="image/x-icon">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" style="height: 100%;">
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">ACME CO VAULT</h2>
+            </div>
+            
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section">
+                <ul>
+                    <li class="sidebar-subtitle"><a href="index.html">Overview</a></li>
+                    <li class="sidebar-subtitle"><a href="files.html">Files</a></li>
+                    <li class="sidebar-subtitle"><a href="libraries.html">Libraries</a></li>
+                    <li class="sidebar-subtitle"><a href="systems.html">Systems</a></li>
+                    <li class="sidebar-subtitle"><a href="reports.html">Reports</a></li>
+                    <li class="sidebar-subtitle"><a href="users.html">Users</a></li>
+                    <li class="sidebar-subtitle"><a href="groups.html">Groups</a></li>
+                    <li class="sidebar-subtitle"><a href="accessKeys.html">Access Keys</a></li>
+                    <li class="sidebar-subtitle"><a href="policies.html">Policies</a></li>
+                    <li class="sidebar-subtitle"><a href="vaultAI.html">Vault AI</a></li>
+                    <li class="sidebar-subtitle"><a href="equipmentOrder.html">Equipment Order</a></li>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Support</a></li> 
+                </ul>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section">
+                <ul>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Transcoding</a></li>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Partial File Recall</a></li>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Third Party Integrations</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section, sidebar-bottom">
+                <p><span>AcmeCoVault</span><br>Host Name</p>
+                <p><span>5,000 TB</span><br>Total Storage Capacity</p>
+                <p><span>2,000 TB</span><br>Local Storage Capacity</p>
+                <p><span>Unlimited</span><br>Vault Manager Licenses</p>
+                <p><span>Add-Ons</span><br>Vault AI</p>
+                <!-- Logout Button -->
+                <button class="details" id="logout-button">Logout</button>
+            </div>
+
+            <div class="sidebar-logo">
+                <a href="https://www.osstorage.com/" target="_blank">
+                    <img src="public/images/OSS_head_logo.webp" alt="Company Logo">
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Main Content -->
+        <!-- Dashboard -->
+        <div class="main-content" style="height: 100%;">
+            <header>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                
+                <div class="logo-container">
+                    <img src="public/images/OSS-Logo-latest1.png" alt="Company Logo" class="logo">
+                    <h1>Dashboard</h1>
+                </div>
+            </header>    
+
+            <!-- Control Bar -->
+            <div class="logo-container">
+                <div class="storage-selection">
+                    <span>Select Storage System</span>
+                    <div class="custom-dropdown">
+                        <button id="dropdownButton" class="dropdown-btn">All</button>
+                        <ul id="dropdownList" class="dropdown-options">
+                            <li data-value="all" class="active">All</li>
+                            <li data-value="cache">Cache</li>
+                            <li data-value="lto">LTO</li>
+                            <li data-value="aws-cloud">AWS Cloud</li>
+                            <li data-value="oss-cloud">OSS Cloud</li>
+                        </ul>
+                        <button class="dropdown-btn" id="alarm-button" style="margin-left: 15px">Silence RAID Alarm</button>
+
+                    </div>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." class="search-box">
+                    <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <!-- Font awesome icons -->
+                    <button class="button"><i class="fa-solid fa-rocket"></i></button>
+                    <button class="button"><i class="fa-solid fa-sliders"></i></button>
+                    <button class="button"><i class="fa-solid fa-bell"></i></button>
+                    <button class="button" id="light_mode"><i class="fa-solid fa-moon"></i></button>
+                </div>
+            </div>          
+
+            <!-- Dashboard Items -->
+            <div class="dashboard-grid">
+                <div class="grid-item small-box-flex" style="box-shadow: none; padding: 0;">
+                    <div class="small-box">
+                        <i class="fa-regular fa-folder-open"></i>
+                        <h3>Total Files</h3>
+                        <p>13,682,444</p>
+                        <p class="date">As of Jan 19, 2025</p>
+                    </div>
+                    <div class="small-box">
+                        <i class="fa-solid fa-address-book"></i>
+                        <h3>Total Directories</h3>
+                        <p>275</p>
+                        <p class="date">As of Jan 19,2025</p>
+                    </div>
+                    <div class="small-box">
+                        <i class="fa-solid fa-folder-plus"></i>
+                        <h3>Active Storage</h3>
+                        <p>4,008 TB</p>
+                        <p class="date">As of Jan 19,2025</p>
+                    </div>
+                    <div class="small-box">
+                        <i class="fa-solid fa-folder-minus"></i>
+                        <h3>Deleted Storage</h3>
+                        <p>709.41 TB</p>
+                        <p class="date">As of Jan 19,2025</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item large-box">
+                    <!-- Details Panel -->
+                    <div id="details-panel" class="details-panel">
+                        <div class="details-content">
+                            <span id="close-details" class="close-btn">&times;</span>
+                            <h2>Notifications Details</h2>
+                            <ul id="notifications-list">
+                                <li class="update"><strong>Update:</strong> System maintenance scheduled for 3 AM.</li>
+                                <li class="update"><strong>Update:</strong> Security patch deployed on all servers.</li>
+                                <li class="active-jobs"><strong>Active Job:</strong> AI-driven system monitoring activated.</li>
+                                <li class="update"><strong>Update:</strong> Software upgrade completed on Media Server.</li>                    
+                                <li class="warning-alerts"><strong>Warning:</strong> Low disk space detected on Remote-Backup1.</li>
+                                <li class="update"><strong>Update:</strong> Network optimization performed.</li>
+                                <li class="update"><strong>Update:</strong> Backup policies updated.</li>
+                                <li class="active-jobs"><strong>Active Job:</strong> Disaster recovery simulation active.</li>
+                                <li class="active-jobs"><strong>Active Job:</strong> User access audit in progress.</li>
+                                <li class="update"><strong>Update:</strong> API integrations enhanced.</li>
+                                <li class="active-jobs"><strong>Active Job:</strong> Backup operation running on HQ-Storage1.</li>
+                                <li class="active-jobs"><strong>Active Job:</strong> Data replication in progress.</li>
+                                <li class="update"><strong>Update:</strong> Admin dashboard UI improved.</li>
+                                <li class="update"><strong>Update:</strong> Performance monitoring tools added.</li>
+                                <li class="update"><strong>Update:</strong> Enhanced file indexing system.</li>
+                                <li class="update"><strong>Update:</strong> Compliance audit logs updated.</li><li class="active-jobs"><strong>Active Job:</strong> Cloud migration ongoing.</li>
+                                <li class="critical-alerts"><strong>Critical Alert:</strong> Web Server is currently down.</li><li class="active-jobs"><strong>Active Job:</strong> Security scan in progress.</li>
+                                <li class="active-jobs"><strong>Active Job:</strong> Large file transfer initiated.</li>
+                                <li class="active-jobs"><strong>Active Job:</strong> Server performance optimization running.</li>
+                                <li class="active-jobs"><strong>Active Job:</strong> Encrypted storage verification running.</li>
+                                <li class="active-jobs"><strong>Active Job:</strong> Redundant backups executing.</li>
+                                <li class="update"><strong>Update:</strong> New cloud sync feature enabled.</li>
+                                <li class="warning-alerts"><strong>Warning:</strong> High memory usage detected on Database Server.</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div style= "display: flex; justify-content: space-between;">
+                        <h3>Notifications Summary</h3>
+                        <button class="details" id="details-button"> Details </button>
+                    </div>            
+                    <div class="small-box-grid" style="text-align: center;">
+                        <p><span class="updates">11<br></span> Updates</p>
+                        <p><span class="active-jobs">42<br></span> Active Jobs</p>
+                        <p><span class="warning-alerts">2<br></span> Warning Alerts</p>
+                        <p><span class="critical-alerts">1<br></span> Critical Alert</p>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="cnTitle">
+                        <h3>System Health</h3>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>     
+                    <div class="health-container">
+                        <div class="health-metric">
+                            <span class="metric-title">Disk Health</span>
+                            <span id="disk-health" class="metric-value updates">Good</span>
+                        </div>
+                        <div class="health-metric">
+                            <span class="metric-title">RAID Status</span>
+                            <span id="raid-status" class="metric-value updates">Optimal</span>
+                        </div>
+                        <div class="health-metric">
+                            <span class="metric-title">IOPS</span>
+                            <span id="iops" class="metric-value">10,500</span>
+                        </div>
+                        <div class="health-metric">
+                            <span class="metric-title">Throughput</span>
+                            <span id="throughput" class="metric-value">500 MB/s</span>
+                        </div>
+                        <div class="health-metric">
+                            <span class="metric-title">Latency</span>
+                            <span id="latency" class="metric-value">5 ms</span>
+                        </div>
+                        <div class="health-metric">
+                            <span class="metric-title">Capacity Utilization</span>
+                            <span id="capacity" class="metric-value warning">75%</span>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="grid-item">
+                    <div class="cnTitle">
+                        <h3>Systems Status</h3>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>  
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Location</th>
+                                <th>IP Address</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="systems-status-data"></tbody>
+                    </table>
+                    <!-- System Details Pop Up -->
+                    <div id="system-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn">&times;</span>
+                            <h2 id="modal-title">System Details</h2>
+                            <p><strong>Location:</strong> <span id="modal-location"></span></p>
+                            <p><strong>IP Address:</strong> <span id="modal-ip"></span></p>
+                            <p><strong>Purchase Date:</strong> <span id="modal-purchase"></span></p>
+                            <p><strong>Warranty Expiration:</strong> <span id="modal-warranty"></span></p>
+                            <p><strong>OS Version:</strong> <span id="modal-os"></span></p>
+                            <p><strong>Firmware Version:</strong> <span id="modal-firmware"></span></p>
+                            <p><strong>End-of-Life Status:</strong> <span id="modal-eol"></span></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid-item ">
+                    <div class="cnTitle">
+                        <h3>Job Operations</h3>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <canvas id="jobops" class="cn" style="max-height: 85%"></canvas>
+                </div>
+
+                <div class="grid-item full-row">
+                    <div class="cnTitle">
+                        <h3>Requests Status</h3>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>  
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Task</th>
+                                <th>Status</th>
+                                <th>%</th>
+                                <th>Priority</th>
+                                <th>Start</th>
+                                <th>End</th>
+                                <th>Asset</th>
+                                <th>IP</th>
+                                <th>Owner</th>
+                            </tr>
+                        </thead>
+                        <tbody id="requests-status-data"></tbody>
+                    </table>
+                </div>
+
+                <div class="grid-item cn">
+                    <div class="cnTitle">
+                        <h3>Storage Distribution</h3>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <canvas id="storageChart"></canvas>
+                    
+                </div>
+                
+                <div class="grid-item cn">
+                    <div class="cnTitle">
+                        <h3>Resource Utilization</h3>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    <canvas id="resourceChart"></canvas>
+                </div>
+
+                            
+                
+            </div>
+        </div>
+
+        <!-- Description Modal -->
+        <div id="description-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-btn" id="desc-close-btn">&times;</span>
+                <h2 id="desc-title">Section Info</h2>
+                <p id="desc-body">placeholder</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="src/jobchart.js" type="module"></script>
+    <script src="src/storagechart.js" type="module"></script>
+    <script src="src/resourcechart.js" type="module"></script> 
+    <script src="src/dropdown.js" type="module"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (!localStorage.getItem("authenticated")) {
+                window.location.href = "login.html";
+            }
+        });
+    </script>
+    
+</body>
+</html>

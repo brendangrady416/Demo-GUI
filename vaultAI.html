@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo GUI - Files</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/files.css">
+    <script defer src="src/script.js"></script>
+    <script defer src="src/vaultAI.js"></script>
+    <script src="https://kit.fontawesome.com/8e9f773407.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="public/images/OSS-Logo-latest1.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h2 class="sidebar-title">ACME CO VAULT</h2>
+            </div>
+            
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section">
+                <ul>
+                    <li class="sidebar-subtitle"><a href="index.html">Overview</a></li>
+                    <li class="sidebar-subtitle"><a href="files.html">Files</a></li>
+                    <li class="sidebar-subtitle"><a href="libraries.html">Libraries</a></li>
+                    <li class="sidebar-subtitle"><a href="systems.html">Systems</a></li>
+                    <li class="sidebar-subtitle"><a href="reports.html">Reports</a></li>
+                    <li class="sidebar-subtitle"><a href="users.html">Users</a></li>
+                    <li class="sidebar-subtitle"><a href="groups.html">Groups</a></li>
+                    <li class="sidebar-subtitle"><a href="accessKeys.html">Access Keys</a></li>
+                    <li class="sidebar-subtitle"><a href="policies.html">Policies</a></li>
+                    <li class="sidebar-subtitle"><a href="vaultAI.html">Vault AI</a></li>
+                    <li class="sidebar-subtitle"><a href="equipmentOrder.html">Equipment Order</a></li>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Support</a></li> 
+                </ul>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section">
+                <ul>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Transcoding</a></li>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Partial File Recall</a></li>
+                    <li class="sidebar-subtitle"><a href="https://www.osstorage.com/contact/" target="_blank">Third Party Integrations</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section, sidebar-bottom">
+                <p><span>AcmeCoVault</span><br>Host Name</p>
+                <p><span>5,000 TB</span><br>Total Storage Capacity</p>
+                <p><span>2,000 TB</span><br>Local Storage Capacity</p>
+                <p><span>Unlimited</span><br>Vault Manager Licenses</p>
+                <p><span>Add-Ons</span><br>Vault AI</p>
+                <!-- Logout Button -->
+                <button class="details" id="logout-button">Logout</button>
+            </div>
+
+            <div class="sidebar-logo">
+                <a href="https://www.osstorage.com/" target="_blank">
+                    <img src="public/images/OSS_head_logo.webp" alt="Company Logo">
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                
+                <div class="logo-container">
+                    <img src="public/images/OSS-Logo-latest1.png" alt="Company Logo" class="logo">
+                    <h1>Vault AI</h1>
+                </div>
+            </header> 
+
+            <div class="files-status">
+                <div class="files-status-box">
+                    <span class="status-indicator online">● Active Storage</span>
+                    <span class="storage-info">Total Files: 1,205,774</span>
+                </div>
+            </div>
+
+            <div class="file-actions">
+                <button class="file-btn">Upload File</button>
+                <button class="file-btn">Delete Selected</button>
+                <button class="file-btn">Move</button>
+                <button class="file-btn">Rename</button>
+                <button class="file-btn">Download</button>
+                <input type="text" placeholder="Search..." class="search-box" style="margin-left: 30px; width: 10%;">
+                <button class="file-btn">Search</button>
+            </div>
+
+            <div class="files-table-container">
+                <table class="files-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Size</th>
+                            <th>Modified</th>
+                            <th>Accessed By</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <!-- Files -->
+                        <tr>
+                            <td><img src="public/images/aiSamplePic1.png" alt="thumbnail" class="thumbnail"></td>
+                            <td>News_Report_Q1.mp4</td>
+                            <td>9.1 MB</td>
+                            <td>2025-02-18</td>
+                            <td>API</td>
+                        </tr>
+                        <tr class="stand-by">
+                            <td><img src="public/images/aiSamplePic6.png" alt="thumbnail" class="thumbnail"></td>
+                            <td>Budget_2024.xlsx <br><br> <b>Ingesting with VaultAI Stand By</b></td>
+                            <td>1.8 MB</td>
+                            <td>2025-02-01</td>
+                            <td>Ryan Green</td>
+                        </tr>
+                        <tr class="stand-by">
+                            <td><img src="public/images/aiSamplePic3.png" alt="thumbnail" class="thumbnail"></td>
+                            <td>Project_Render.mp4 <br><br> <b>Ingesting with VaultAI Stand By</b></td>
+                            <td>7.4 MB</td>
+                            <td>2025-01-30</td>
+                            <td>Diana Evans</td>
+                        </tr>
+                        <tr class="stand-by">
+                            <td><img src="public/images/aiSamplePic5.png" alt="thumbnail" class="thumbnail"></td>
+                            <td>Marketing_Video.mp4 <br><br> <b>Ingesting with VaultAI Stand By</b></td>
+                            <td>540 MB</td>
+                            <td>2025-01-28</td>
+                            <td>API</td>
+                        </tr>
+                        <tr class="stand-by">
+                            <td><img src="/images/aiSamplePic2.png" alt="thumbnail" class="thumbnail"></td>
+                            <td>Client_Proposal.mp4 <br><br> <b>Ingesting with VaultAI Stand By</b></td>
+                            <td>500 KB</td>
+                            <td>2025-02-03</td>
+                            <td>API</td>
+                        </tr>
+                        <tr class="stand-by">
+                            <td><img src="/images/aiSamplePic4.png" alt="thumbnail" class="thumbnail"></td>
+                            <td>Backup_2024.zip <br><br> <b>Ingesting with VaultAI Stand By</b></td>
+                            <td>2.1 GB</td>
+                            <td>2024-12-31</td>
+                            <td>Shaun Grady</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Video Modal -->
+                <div id="video-modal" class="modal" style="display: none;">
+
+                    <div class="modal-content video-modal-content">
+                        <span class="close-btn" id="video-close">&times;</span>
+                        <div class="video">
+                            <h2 id="video-title">Video Preview</h2>
+                            <video id="video-player" width="100%" controls src="public/videos/Sequence01.mp4">
+                                <source src="public/videos/Sequence01.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="video-details">
+                            <br>
+                            <h3>Details</h3>
+                            <p id="video-details"><span>Name: </span>News_Report_Q1.mp4</p>
+                            <p id="video-details"><span>Length: </span>0:28</p>
+                            <p id="video-details"><span>Size: </span>9.1 MB</p>
+                            <p id="video-details"><span>Resolution: </span>1080p</p>
+                            <p id="video-details"><span>Last Modified: </span>2025-02-18</p>
+                            <p id="video-details"><span>Accessed By: </span>API</p>
+                            <p id="video-details"><span>Location: </span>HQ-Storage1</p>          
+                    </div>
+                    <div class="video-transcription">
+                        <h3>Transcription</h3>
+                        <p id="video-transcription">Now, there are three. 
+                            Tonight, make it three. Three baby eaglets for those two parents. We first reported on that family of bald eagles in Southern California's San Bernardino Mountains last week. So many across the country watching their nest live online. The new parents, now with three baby eaglets all hatching within days of each other. Very rare for bald eagles. The nonprofit Friends of Big Beat Valley, tracking them around the clock with a solar powered camera. 
+                            </p>
+                    </div>
+                    <div class="video-tags">
+                        <h3>Tags</h3>
+                        <div id="tag-list" class="tag-list"></div>
+                        <input type="text" class="input-box" id="tag-input" placeholder="Add tag...">
+                        <button id="add-tag-btn">Add Tag</button>
+                    </div>                    
+                </div>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>
