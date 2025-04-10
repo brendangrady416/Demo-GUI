@@ -1,0 +1,88 @@
+/* Status Section Styling */
+.status-section {
+    background: #1e2a38;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.status-box {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.status-indicator {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+.online {
+    color: #2db77b;
+}
+.drive-list {
+    font-size: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Actions Section */
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    background: #1e2a38;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.action-btn {
+    background: #2db77b;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+.action-btn:hover {
+    background: #249d66;
+}
+
+/* Table Styling */
+.table-container {
+    background: #1e2a38;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    background: #f3f4f6;
+    font-weight: bold;
+    color: #333;
+}
+td {
+    color: #555;
+}
+tr:hover {
+    background: #f9fafc;
+}

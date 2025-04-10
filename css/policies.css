@@ -1,0 +1,78 @@
+/* === POLICIES PAGE STYLES === */
+
+/* Policies Table Container */
+.policies-table-container {
+    background: #1e2a38;
+    padding: 30px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.policies-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: auto;
+}
+
+.dark-mode .policies-container {
+    background: #1e2a38;
+}
+
+.policy-setting {
+    margin-bottom: 20px;
+}
+
+.policy-setting label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.policy-setting select, 
+.policy-setting input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.save-btn {
+    background-color: #2db77b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.save-btn:hover {
+    background-color: #239b67;
+}
+
+/* Range Input Styling */
+input[type="range"] {
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .policies-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .policy-btn {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    .policies-table-container {
+        padding: 10px;
+    }
+}

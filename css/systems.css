@@ -1,0 +1,71 @@
+/* === SYSTEMS PAGE STYLES === */
+
+/* Status Section */
+.systems-status {
+    background: #1e2a38;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.systems-status-box {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-indicator {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: #2db77b;
+    color: white;
+    border-radius: 5px;
+}
+
+/* System Actions */
+.systems-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    background: #1e2a38;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.system-btn {
+    background: #2db77b;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.system-btn:hover {
+    background: #249d66;
+}
+
+/* System Table */
+.systems-table-container {
+    background: #1e2a38;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.status-up { color: #2db77b; }
+.status-down { color: #dc3545; }
+.status-maintenance { color: #fd7e14; }

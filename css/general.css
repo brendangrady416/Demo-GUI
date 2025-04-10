@@ -1,0 +1,929 @@
+
+@charset "UTF-8";
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url("public/fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf") format("truetype");
+}
+
+/* === RESET & BASE STYLES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lexend Deca", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --primary-color: #333;
+    --secondary-color: #fafafa;
+    --oss-green: #2DB77B;
+    --oss-navy: #081D3A;
+    --oss-light-blue: #36BDED;
+    --warning-color: #fd7e14;
+    --critical-color: #dc3545;
+    --table-header-bg: #f3f4f6;
+    --font: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100%;
+    background-color: #f0f0f1;
+    padding: 5px; /* Added padding around full-screen flexbox */
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+/* === DARK MODE === */
+/* Dark Mode */
+.dark-mode {
+    background-color: #838383;
+    color: white;
+}
+
+/* Dark Mode Sidebar */
+.dark-mode .sidebar {
+    background-color: var(--oss-navy);
+    color: white;
+    border-color: #838383;
+}
+.dark-mode .sidebar-section ul li a {
+    background-color: var(--oss-navy);
+    color: white;
+}
+
+.dark-mode .sidebar-section ul li:hover {
+    background-color: #1a365d;
+}
+.dark-mode .sidebar-section ul li a:hover {
+    background-color: #1a365d;
+}
+
+.dark-mode h2 {
+    background-color: var(--oss-navy);
+    color: white;
+}
+
+/* Dark Mode Main Content */
+.dark-mode .main-content {
+    background-color: #06162b;
+    color: white;
+}
+
+/* Dark Mode Details Panel */
+.dark-mode .details-panel {
+    background: rgba(0, 0, 0, 0.9);
+    color: var(--oss-navy);
+}
+
+/* Dark Mode Buttons */
+.dark-mode button {
+    background-color: white;
+    color: var(--oss-navy);
+}
+
+/* Dark Mode Links */
+.dark-mode a {
+    color: #36BDED;
+}
+
+/* Dark Mode for Tables */
+.dark-mode .grid-item {
+    background: #081D3A;
+    color: white;
+    box-shadow: 0px 0px 10px var(--oss-green);
+}
+.dark-mode .small-box {
+    background: #081D3A;
+    color: white;
+    box-shadow: 0px 0px 10px var(--oss-green);
+}
+
+
+.dark-mode table {
+    background: #102a43;
+    color: white;
+}
+
+.dark-mode th {
+    background: #183d5d;
+    color: white;
+}
+
+.dark-mode td {
+    border-color: #2c4d73;
+    color: white;
+}
+
+.dark-mode tr:hover {
+    background: #1a365d;
+}
+
+.dark-mode img {
+    border-radius: 16px;
+}
+
+.dark-mode button {
+    background-color: #1a365d;
+    color: white;
+}
+.dark-mode .search-button {
+    color: #838383;
+    background-color: white;
+}
+
+.dark-mode .health-metric {
+    background: #06162b;
+    color: white;
+}
+
+.dark-mode .metric-title {
+    color: #dcdbdb;
+}
+
+
+
+/* === FLEX CONTAINER FOR SIDEBAR & MAIN CONTENT === */
+.container {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+}
+
+/* === SIDEBAR NAVIGATION === */
+.sidebar {
+    width: 220px; /* Made thinner */
+    background: #ffffff;
+    padding: 20px;
+    height: 110%;
+    border-right: 2px solid #d1d5db;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* === Sidebar Sections === */
+.sidebar-section {
+    padding: 10px 0;
+}
+
+/* Glowing Green Divider */
+.sidebar-divider {
+    height: 2px;
+    background: #4caf50;
+    opacity: 0.8;
+    width: 100%;
+    margin: 10px auto;
+    box-shadow: 0px 0px 8px rgba(76, 175, 80, 0.75);
+}
+
+/* === Sidebar Titles === */
+.sidebar-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: center;
+}
+
+.sidebar-subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.sidebar-bottom {
+    height: 30%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-family: var(--font);
+    padding-top: 1em;
+    padding-bottom: 3em;
+}
+
+.sidebar-bottom span {
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+/* === Sidebar Links === */
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    width: 100%;
+}
+
+.sidebar ul li:hover {
+    background-color: #f3f4f6;
+    border-radius: 5px;
+}
+
+/* === Footer Logo === */
+.sidebar-logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.sidebar-logo img {
+    width: 200px;
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw + 220px);
+    margin-left: 0;
+    height: 110%;
+}
+
+/* === HEADER SECTION === */
+header {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.logo {
+    width: 80px; /* Adjust size to match */
+    margin-right: 20px;
+}
+
+
+h1 {
+    font-size: 48px;
+}
+
+/* === All button Dropdown TODO: Review possible conflicts with JS === */
+/* Note funtions useablility in dropdown.js */
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: white;
+    color: #2EAA67;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.dropdown-btn:hover {
+    background-color: #f2f2f2;
+}
+.dropdown-options {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 0;
+    margin-top: 5px;
+    display: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.dropdown-options li {
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.dropdown-options li:hover {
+    background: #f4f4f4;
+}
+
+.dropdown-options .active {
+    font-weight: bold;
+    color: #2EAA67;
+}
+.all-btn {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-box {
+    width: 220px;
+    padding: 0.4rem 2rem;  
+    border: 1px solid #ccc;
+    border-radius: 20px;    
+    outline: none;
+    font-size: 0.9rem;
+    color: #444;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.search-box:focus {
+    border-color: #888;
+}
+
+/* Place mag glass in search box */
+.search-button {
+    position: absolute;
+    right: 13em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    color: #444;
+    font-size: 1rem;
+}
+
+/* Icon buttons: rocket, sliders, bell, etc. */
+.button {
+    margin-left: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #444;
+    width: 32px; 
+    height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: #e2e2e2;
+    color: #000;
+}
+
+/* === FLEX GRID DASHBOARD LAYOUT === */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Notifications Summary takes full height */
+.large-box {
+    grid-row: span 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.large-box p span {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.updates { color: var(--oss-green); }
+.active-jobs { color: var(--oss-green); }
+.warning-alerts { color: var(--warning-color); }
+.critical-alerts { color: var(--critical-color); }
+
+/* 2x2 Grid inside Row 1, Column 2 */
+.small-box-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-column: span 2;
+    gap: 20px;
+}
+
+.small-box-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0px;
+}
+
+.small-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px rgb(0, 0, 0.1);
+    text-align: center;
+    width: 25%;
+}
+
+
+/* TODO : FIX POSITIONING WITH RESTRUCTING HTML AND FILL BY PERCENTS */
+.small-box i {
+    color: var(--oss-green);
+    font-size: 2em;
+}
+
+.date {
+    font-size: 0.6em;
+    color: #777;
+}
+
+/* System Status and Job Operations in Row 2 */
+.grid-item {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px rgb(0, 0, 0.1);
+}
+
+/* Requests Status spans full width */
+.full-row {
+    grid-column: span 2;
+}
+
+/* === TABLE STYLES === */
+.tables {
+    margin-top: 20px;
+}
+
+canvas{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.cn {
+    width: 100%;
+    height: 93%;
+    background: white;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #f3f4f6;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+#systems-status-data {
+    font-size: 15px;
+}
+
+td {
+    color: #555;
+}
+
+tr:hover {
+    background: #f9fafc;
+}
+
+/* === STATUS BADGES === */
+.status-up { background: #d4edda; color: #155724; padding: 6px 10px; border-radius: 5px; font-weight: bold; }
+.status-down { background: #f8d7da; color: #721c24; padding: 6px 10px; border-radius: 5px; font-weight: bold; }
+.status-maintenance { background: #fff3cd; color: #856404; padding: 6px 10px; border-radius: 5px; font-weight: bold; }
+.status-unknown { background: #d6d8db; color: #383d41; padding: 6px 10px; border-radius: 5px; font-weight: bold; }
+
+/* === CHART PLACEHOLDERS === */
+.chart-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.chart {
+    width: 48%;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.graph-placeholder, .pie-placeholder {
+    width: 100%;
+    height: 200px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #777;
+}
+/*  */
+.cnTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cnTitle i {
+    margin-left: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #444;
+    width: 32px; 
+    height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.cnTitle i:hover {
+    background-color: #e2e2e2;
+    color: #000;
+
+}
+
+/* .graph-placeholder::before { content: "Graph Placeholder"; }
+.pie-placeholder::before { content: "Pie Chart Placeholder"; } */
+
+/* SYSTEM HEALTH PANEL */
+/* Health Metrics Container */
+.health-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Individual Metric Box */
+.health-metric {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Metric Titles */
+.metric-title {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Metric Values */
+.metric-value {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* === ICON STYLES === */
+.icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* === BUTTON STYLING === */
+.btn {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-green { background: #28a745; color: white; }
+.btn-red { background: #dc3545; color: white; }
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.details {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1rem;         
+    font-weight: 500;          /* Slightly bold, but not too heavy */
+  
+    /* Colors & borders */
+    color: var(--oss-green);            
+    background-color: #ffffff; 
+    border: 2px solid lightgray; 
+  
+    
+    border-radius: 5px;       
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  
+    transition: box-shadow 0.2s ease-in-out;
+  }
+  
+  .details:hover {
+    /* Slightly increase the shadow on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .details:focus {
+    outline: none; /* Remove default focus outline; add your own if desired */
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3); /* Example focus ring */
+  }
+
+  /* === FULL-SCREEN DETAILS PANEL === */
+.details-panel {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.details-content {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 80vw;
+    height: 80vh;
+    max-width: 900px;
+    overflow-y: auto;
+    position: relative;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Notifications List */
+#notifications-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#notifications-list li {
+    background: #f8f9fa;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+/* Systems Pop Up */
+/* SYSTEM DETAILS MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 80vw;
+    max-width: 600px;
+    overflow-y: auto;
+    position: relative;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Modal Text Styles */
+.modal-content p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.percent-complete {
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+.percent-progress {
+    background-color: #fff3cd;
+    color: #856404;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+.percent-failed {
+    background-color: #f8d7da;
+    color: #721c24;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 80vw;
+    max-width: 600px;
+    overflow-y: auto;
+    position: relative;
+}
+
+
+/* FADE-IN ANIMATIONS */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); }
+    to { transform: translateY(0); }
+}
+
+.sidebar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* === RESPONSIVE DESIGN === */
+/* Sidebar Toggle Button */
+@media (max-width: 768px) {
+    .sidebar {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 220px;
+        height: 100%;
+        background: white;
+        transition: left 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .sidebar-toggle {
+        display: inline-block;
+    }
+
+    .container {
+        flex-direction: column;
+        position: relative;
+        width: auto ;
+    }
+
+    .main-content {
+        width: 92%;
+        margin-left: 0;
+        margin: 0;
+    }
+
+    .dashboard-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .grid-item,
+    .large-box,
+    .small-box,
+    .cn
+    {
+        width: 100% !important;
+    }
+
+    .cn {
+        height: 1000px;
+    }
+
+    /* Ensure full-width header */
+    header {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .logo-container {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    h1 {
+        font-size: 32px;
+        flex-grow: 1;
+    }
+
+    .small-box-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .health-container {
+        grid-template-columns: 1fr;
+    }
+}

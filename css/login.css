@@ -1,0 +1,119 @@
+/* === LOGIN PAGE STYLING === */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(125deg, #0b254a , #2ba06d);
+    /* background: linear-gradient(125deg, #081D3A , #2DB77B); */
+    margin: 0;
+    font-family: "Lexend Deca", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+/* Login Container */
+.login-container {
+    background: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 350px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Input Fields */
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.login-container input:focus {
+    border-color: #2DB77B;
+    box-shadow: 0 0 8px rgba(45, 183, 123, 0.5);
+    outline: none;
+}
+
+/* Login Button */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background: #2DB77B;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.login-container button:hover {
+    background: #239A66;
+    transform: scale(1.01);
+}
+
+/* Error Message */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+img {
+    width: 250px;
+    margin-bottom: 40px;
+    margin-right: 10px;
+}
+
+.social-login {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+#google-login {
+    background-color: #db4437;
+    color: white;
+}
+
+#google-login:hover {
+    background-color: #c23321;
+}
+
+#microsoft-login {
+    background-color: #2F2F2F;
+    color: white;
+}
+
+#microsoft-login:hover {
+    background-color: #1a1a1a;
+}
+
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .login-container {
+        width: 90%;
+        padding: 30px;
+    }
+}

@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #333;
+    --secondary-color: #fafafa;
+    --oss-green: #2DB77B;
+    --oss-navy: #081D3A;
+    --oss-light-blue: #36BDED;
+    --font: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    height: 98vh;
+    width: 18vh;
+    padding: 2em 1em;
+    margin: 0.7em;
+    box-shadow: var(--primary-color) 0 0 10px;
+}
+
+aside h1 {
+    font-family: var(--font);
+    font-weight: 1000;
+}
+
+aside hr {
+    width: 100%;
+    height: 0.2em;
+    border: none;
+    margin: 1em;
+    /* Some of these work with different browsers 
+    but all accomplish the same thing
+    */
+    border-color: var(--oss-green);
+    background-color: var(--oss-green);
+    color: var(--oss-green);
+}
+
+.aside-main{
+    width: 100%;
+}
+
+.aside-main ul, .aside-extra ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+.aside-main ul li, .aside-extra ul li {
+    padding: 10px 0;
+}
+
+.aside-main ul li a, .aside-extra ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    display: block;
+    padding: 5px 15px;
+    transition: background 0.3s ease;
+    font-family: var(--font);
+}
+
+/* TODO: determine possible wanted hover effects */
+.aside-main ul li a:hover, .aside-extra ul li a:hover {
+    background: var(--oss-light-blue);
+    color: white;
+    border-radius: 5px;
+}
+
+.aside-footer{
+    height: 100%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-family: var(--font);
+    /* text-align: center; */
+    padding-top: 1em;
+}
+
+.aside-footer .Acme-Footer {
+    font-size: 1.2em;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.aside-footer span {
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.oss-logo {
+    margin-top: auto;
+    padding-top: 1em;
+}
+
+.oss-logo img {
+    width: 80%;
+}

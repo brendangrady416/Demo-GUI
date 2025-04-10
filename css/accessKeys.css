@@ -1,0 +1,135 @@
+/* === ACCESS KEYS PAGE STYLES === */ 
+
+/* Access Keys Section */
+.access-keys-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    background: #1e2a38;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.access-btn {
+    background: #2db77b;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    margin: 0px;
+}
+
+.access-btn:hover {
+    background: #249d66;
+}
+
+/* Access Keys Table */
+.access-keys-table-container {
+    background: #1e2a38;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.access-keys-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.access-keys-table th, .access-keys-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.access-keys-table th {
+    background: #f3f4f6;
+    font-weight: bold;
+    color: #333;
+}
+
+.access-keys-table td {
+    color: #555;
+}
+
+.access-keys-table tr:hover {
+    background: #f9fafc;
+}
+
+/* Add Access Key Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1e2a38;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: none;
+    background: white;
+    color: black;
+}
+
+button {
+    background: #2db77b;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #249d66;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .access-keys-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .access-btn {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    .access-keys-table-container {
+        padding: 10px;
+    }
+}

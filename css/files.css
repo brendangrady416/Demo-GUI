@@ -1,0 +1,214 @@
+/* Status Section - Displays File System Info */
+.files-status {
+    background: #1e2a38;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.files-status-box {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-indicator {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: #2db77b;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Action Buttons - Inspired by Libraries */
+.file-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    background: #1e2a38;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.file-btn {
+    background: #2db77b;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.file-btn:hover {
+    background: #249d66;
+}
+
+.files-table-container {
+    background: #1e2a38;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* File Icons */
+.file-icon {
+    margin-right: 10px;
+    color: #2db77b;
+    font-size: 1.2rem;
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.video-modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+}
+
+.video-details span {
+    /* font-size: 1.2rem; */
+    font-weight: bold;
+}
+
+.modal-content video {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.modal .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    color: #333;
+    cursor: pointer;
+}
+
+.modal .close-btn:hover {
+    color: red;
+}
+
+/* Tags */
+.video-tags {
+    margin-top: 15px;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.tag {
+    background-color: #2db77b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.tag .remove-tag {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#tag-input {
+    width: 50%;
+    padding: 0.4rem ;  
+    border: 1px solid #ccc;
+    border-radius: 20px;    
+    outline: none;
+    font-size: 0.9rem;
+    color: #444;
+    transition: border-color 0.2s ease-in-out;
+}
+
+#tag-input:focus {
+    border-color: #888;
+}
+
+#add-tag-btn {
+    background: #2db77b;
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+#add-tag-btn:hover {
+    background: #249d66;
+}
+
+.thumbnail {
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.stand-by {
+    background: #f0f0f0;
+    color: #999;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .files-table-container {
+        padding: 10px;
+    }
+
+    .files-status-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .file-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .file-btn {
+        width: 80%;
+        text-align: center;
+    }
+}
